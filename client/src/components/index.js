@@ -10,6 +10,10 @@ import ChannelPreview from "./ChannelPreview";
 import Auth from "./Auth";
 import InputCompForAuth from "./InputCompForAuth";
 import AuthForm from "./AuthForm";
+import CreateChannel from "./CreateChannel";
+import ChannelInner from "./ChannelInner";
+import EditChannel from "./EditChannel";
+import TeamMessage from "./TeamMessage";
 
 export {
   ChannelContainer,
@@ -24,4 +28,8 @@ export {
   Auth,
   InputCompForAuth,
   AuthForm,
+  ChannelInner,
+  TeamMessage,
+  EditChannel,
+  CreateChannel,
 };

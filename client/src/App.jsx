@@ -34,7 +34,7 @@ function App() {
     <div className="app__wrapper">
       <Chat client={client} theme="team light">
         <ChannelListContainer />
-        <ChannelContainer />
+        <ChannelCon tainer />
       </Chat>
     </div>
   );
