@@ -5,14 +5,9 @@ import {
   TeamChannelList,
   TeamChannelPreview,
   Sidebar,
+  CompanyHeader,
 } from "./";
 import Cookies from "universal-cookie";
-
-const CompanyHeader = () => (
-  <div className="channel-list__header">
-    <p className="channel-list__header__text">Chat Application</p>
-  </div>
-);
 
 function ChannelListContainer() {
   return (
