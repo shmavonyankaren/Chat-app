@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import Cookies from "universal-cookie";
-import axios from "axios";
 import signInImage from "../assets/signup.jpg";
 import { AuthForm } from "./";
 
 export default function Auth() {
-  const [isSignup, setIsSingup] = useState(true);
+  const [isSignup, setIsSignup] = useState(true);
   const switchMode = () => {
-    setIsSingup((prevIsSingup) => !prevIsSingup);
+    setIsSignup((prevIsSignup) => !prevIsSignup);
   };
 
   return (

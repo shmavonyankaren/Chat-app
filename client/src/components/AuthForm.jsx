@@ -11,7 +11,7 @@ export default function AuthForm({ isSignup }) {
   const [form, setForm] = useState(initialStateForm);
 
   const hangleChange = onChangeHandlerForForm(setForm, form);
-  const handleSubmit = onSubmitHandlerForForm(form);
+  const handleSubmit = onSubmitHandlerForForm(form, isSignup);
 
   return (
     <form onSubmit={handleSubmit}>
