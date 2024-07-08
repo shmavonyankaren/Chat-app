@@ -9,6 +9,7 @@ export default function Auth() {
   const switchMode = () => {
     setIsSingup((prevIsSingup) => !prevIsSingup);
   };
+
   return (
     <div className="auth__form-container">
       <div className="auth__form-container_fields">
