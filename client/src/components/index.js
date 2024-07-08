@@ -7,7 +7,8 @@ import TeamChannelList from "./TeamChannelList";
 import TeamChannelPreview from "./TeamChannelPreview";
 import DirectPreview from "./DirectPreview";
 import ChannelPreview from "./ChannelPreview";
-
+import Auth from "./Auth";
+import InputCompForAuth from "./InputCompForAuth";
 export {
   ChannelContainer,
   ChannelListContainer,
@@ -18,4 +19,6 @@ export {
   TeamChannelPreview,
   DirectPreview,
   ChannelPreview,
+  Auth,
+  InputCompForAuth,
 };
