@@ -1,5 +1,6 @@
 import React from "react";
-import { Avatar, useChatContext } from "stream-chat-react";
+import { useChatContext } from "stream-chat-react";
+import DirectPreview from "./DirectPreview";
 export default function TeamChannelPreview({ channel, type }) {
   const { channel: activeChannel, client } = useChatContext();
   const ChannelPreview = () => (
@@ -7,21 +8,7 @@ export default function TeamChannelPreview({ channel, type }) {
       #{channel?.data?.name || channel?.data?.id}
     </p>
   );
-  const DirectPreview = () => {
-    const members = Object.values(channel.state.members).filter(
-      ({ user }) => user.id !== client.userID
-    );
-    return (
-      <div className="channel-preview__item single">
-        <Avatar
-          image={members[0]?.user?.image}
-          name={members[0]?.user?.fullName}
-          size={24}
-        />
-        <p>{members[0]?.user?.fullName}</p>
-      </div>
-    );
-  };
+
   return (
     <div
       className={
@@ -33,7 +20,11 @@ export default function TeamChannelPreview({ channel, type }) {
         console.log(channel.name);
       }}
     >
-      {type === "team" ? <ChannelPreview /> : <DirectPreview />}
+      {type === "team" ? (
+        <ChannelPreview />
+      ) : (
+        <DirectPreview channel={channel} client={client} />
+      )}
     </div>
   );
 }
