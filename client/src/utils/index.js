@@ -1,3 +1,3 @@
 import getChannelClosure from "./getChannelClosure.js";
-
-export { getChannelClosure };
+import logout from "./logout.js";
+export { getChannelClosure, logout };
