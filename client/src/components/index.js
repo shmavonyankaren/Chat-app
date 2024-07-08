@@ -9,6 +9,8 @@ import DirectPreview from "./DirectPreview";
 import ChannelPreview from "./ChannelPreview";
 import Auth from "./Auth";
 import InputCompForAuth from "./InputCompForAuth";
+import AuthForm from "./AuthForm";
+
 export {
   ChannelContainer,
   ChannelListContainer,
@@ -21,4 +23,5 @@ export {
   ChannelPreview,
   Auth,
   InputCompForAuth,
+  AuthForm,
 };
