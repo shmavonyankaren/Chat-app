@@ -4,6 +4,7 @@ import Sidebar from "./Sidebar";
 import CompanyHeader from "./CompanyHeader";
 import ChannelSearch from "./ChannelSearch";
 import TeamChannelList from "./TeamChannelList";
+import TeamChannelPreview from "./TeamChannelPreview";
 
 export {
   ChannelContainer,
@@ -12,4 +13,5 @@ export {
   CompanyHeader,
   ChannelSearch,
   TeamChannelList,
+  TeamChannelPreview,
 };
