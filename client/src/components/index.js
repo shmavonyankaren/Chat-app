@@ -6,6 +6,7 @@ import ChannelSearch from "./ChannelSearch";
 import TeamChannelList from "./TeamChannelList";
 import TeamChannelPreview from "./TeamChannelPreview";
 import DirectPreview from "./DirectPreview";
+import ChannelPreview from "./ChannelPreview";
 
 export {
   ChannelContainer,
@@ -16,4 +17,5 @@ export {
   TeamChannelList,
   TeamChannelPreview,
   DirectPreview,
+  ChannelPreview,
 };
