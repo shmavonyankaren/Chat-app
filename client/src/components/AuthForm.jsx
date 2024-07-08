@@ -4,14 +4,13 @@ import {
   arrayOfInputsSignUp,
   initialStateForm,
 } from "../data/constants";
+import { onChangeHandlerForForm } from "../handlers";
 import { InputCompForAuth } from "./";
 
 export default function AuthForm({ isSignup }) {
   const [form, setForm] = useState(initialStateForm);
 
-  const hangleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+  const hangleChange = onChangeHandlerForForm(setForm, form);
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(form);

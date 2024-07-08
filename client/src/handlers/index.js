@@ -1,3 +1,4 @@
 import onSearchHandler from "./onSearchHandler";
+import onChangeHandlerForForm from "./onChangeHandlerForForm";
 
-export { onSearchHandler };
+export { onSearchHandler, onChangeHandlerForForm };
