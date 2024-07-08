@@ -14,6 +14,9 @@ import CreateChannel from "./CreateChannel";
 import ChannelInner from "./ChannelInner";
 import EditChannel from "./EditChannel";
 import TeamMessage from "./TeamMessage";
+import UserList from "./UserList";
+import ListContainer from "./ListContainer";
+import UserItem from "./UserItem";
 
 export {
   ChannelContainer,
@@ -32,4 +35,7 @@ export {
   TeamMessage,
   EditChannel,
   CreateChannel,
+  UserList,
+  ListContainer,
+  UserItem,
 };

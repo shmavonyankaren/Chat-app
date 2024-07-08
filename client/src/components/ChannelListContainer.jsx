@@ -9,7 +9,12 @@ import {
 } from "./";
 import Cookies from "universal-cookie";
 
-function ChannelListContainer() {
+function ChannelListContainer({
+  isCreatin,
+  setIsCreating,
+  setIsEditing,
+  setCreateType,
+}) {
   return (
     <>
       <Sidebar />
@@ -19,7 +24,16 @@ function ChannelListContainer() {
         <ChannelList
           filters={{}}
           channelRenderFilterFn={() => {}}
-          List={(listProps) => <TeamChannelList {...listProps} type="team" />}
+          List={(listProps) => (
+            <TeamChannelList
+              {...listProps}
+              type="team"
+              isCreatin={isCreatin}
+              setIsCreating={setIsCreating}
+              setIsEditing={setIsEditing}
+              setCreateType={setCreateType}
+            />
+          )}
           Preview={(previewProps) => (
             <TeamChannelPreview {...previewProps} type="team" />
           )}
@@ -28,7 +42,14 @@ function ChannelListContainer() {
           filters={{}}
           channelRenderFilterFn={() => {}}
           List={(listProps) => (
-            <TeamChannelList {...listProps} type="messaging" />
+            <TeamChannelList
+              {...listProps}
+              type="messaging"
+              isCreatin={isCreatin}
+              setIsCreating={setIsCreating}
+              setIsEditing={setIsEditing}
+              setCreateType={setCreateType}
+            />
           )}
           Preview={(previewProps) => (
             <TeamChannelPreview {...previewProps} type="messaging" />

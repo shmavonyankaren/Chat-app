@@ -5,6 +5,10 @@ export default function TeamChannelList({
   error = false,
   loading,
   type,
+  isCreatin,
+  setIsCreating,
+  setIsEditing,
+  setCreateType,
 }) {
   if (error) {
     return type === "team" ? (
@@ -30,7 +34,13 @@ export default function TeamChannelList({
         <p className="team-channel-list__header__title">
           {type === "team" ? "Channels" : "Direct Messages"}
         </p>
-        {/*button*/}
+        <AddChannel
+          isCreatin={isCreatin}
+          setIsCreating={setIsCreating}
+          setIsEditing={setIsEditing}
+          setCreateType={setCreateType}
+          type={type === "team" ? "team" : "messaging"}
+        />
       </div>
     </div>
   );
