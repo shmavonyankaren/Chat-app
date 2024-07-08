@@ -3,6 +3,7 @@ import ChannelListContainer from "./ChannelListContainer";
 import Sidebar from "./Sidebar";
 import CompanyHeader from "./CompanyHeader";
 import ChannelSearch from "./ChannelSearch";
+import TeamChannelList from "./TeamChannelList";
 
 export {
   ChannelContainer,
@@ -10,4 +11,5 @@ export {
   Sidebar,
   CompanyHeader,
   ChannelSearch,
+  TeamChannelList,
 };
