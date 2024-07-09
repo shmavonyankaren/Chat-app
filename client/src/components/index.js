@@ -19,6 +19,7 @@ import ListContainer from "./ListContainer";
 import UserItem from "./UserItem";
 import ChannelNameInputComp from "./ChannelNameInputComp";
 import ChannelListContent from "./ChannelListContent";
+import ResultsDropdown from "./ResultsDropdown";
 
 export {
   ChannelContainer,
@@ -42,4 +43,5 @@ export {
   UserItem,
   ChannelNameInputComp,
   ChannelListContent,
+  ResultsDropdown,
 };

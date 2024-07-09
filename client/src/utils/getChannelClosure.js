@@ -4,10 +4,10 @@ const getChannelClosure =
       const channelResponse = client.queryChannels({
         type: "team",
         name: { $autocomplete: text },
-        members: { $in: [client.userId] },
+        members: { $in: [client.userID] },
       });
       const userResponse = client.queryUsers({
-        id: { $ne: client.userId },
+        id: { $ne: client.userID },
         name: { $autocomplete: text },
       });
 
@@ -18,7 +18,7 @@ const getChannelClosure =
 
       if (channels.length) setTeamChannels(channels);
       if (users.length) setDirectChannels(users);
-    } catch (e) {
+    } catch (error) {
       setQuery("");
     }
   };

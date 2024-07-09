@@ -4,6 +4,7 @@ import { useChatContext } from "stream-chat-react";
 import { SearchIcon } from "../assets";
 import { onSearchHandler } from "../handlers";
 import { getChannelClosure } from "../utils";
+import { ResultsDropdown } from "./";
 function ChannelSearch({ setToggleContainer }) {
   const { client, setActiveChannel } = useChatContext();
   const [query, setQuery] = useState("");
@@ -16,7 +17,7 @@ function ChannelSearch({ setToggleContainer }) {
       setTeamChannels([]);
       setDirectChannels([]);
     }
-  }, [query]);
+  }, [query, setTeamChannels, setDirectChannels]);
 
   const getChannels = getChannelClosure(
     setQuery,
@@ -25,7 +26,7 @@ function ChannelSearch({ setToggleContainer }) {
     setDirectChannels
   );
   const onSearch = onSearchHandler(setQuery, getChannels, setLoading);
-  const setChannels = (channel) => {
+  const setChannel = (channel) => {
     setQuery("");
     setActiveChannel(channel);
   };
@@ -51,7 +52,7 @@ function ChannelSearch({ setToggleContainer }) {
           loading={loading}
           setQuery={setQuery}
           setToggleContainer={setToggleContainer}
-          setChannels={setChannels}
+          setChannel={setChannel}
         />
       )}
     </div>
