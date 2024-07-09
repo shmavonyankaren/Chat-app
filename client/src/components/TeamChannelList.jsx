@@ -1,33 +1,38 @@
 import React from "react";
+
 import { AddChannel } from "../assets";
-export default function TeamChannelList({
+
+const TeamChannelList = ({
+  setToggleContainer,
   children,
   error = false,
   loading,
   type,
-  isCreatin,
+  isCreating,
   setIsCreating,
-  setIsEditing,
   setCreateType,
-}) {
+  setIsEditing,
+}) => {
   if (error) {
     return type === "team" ? (
       <div className="team-channel-list">
         <p className="team-channel-list__message">
-          Connection error, please try again
+          Connection error, please wait a moment and try again.
         </p>
       </div>
     ) : null;
   }
+
   if (loading) {
     return (
       <div className="team-channel-list">
         <p className="team-channel-list__message loading">
-          {type === "team" ? "Channels" : "Messages"}loading...
+          {type === "team" ? "Channels" : "Messages"} loading...
         </p>
       </div>
     );
   }
+
   return (
     <div className="team-channel-list">
       <div className="team-channel-list__header">
@@ -35,13 +40,17 @@ export default function TeamChannelList({
           {type === "team" ? "Channels" : "Direct Messages"}
         </p>
         <AddChannel
-          isCreatin={isCreatin}
+          isCreating={isCreating}
           setIsCreating={setIsCreating}
-          setIsEditing={setIsEditing}
           setCreateType={setCreateType}
+          setIsEditing={setIsEditing}
           type={type === "team" ? "team" : "messaging"}
+          setToggleContainer={setToggleContainer}
         />
       </div>
+      {children}
     </div>
   );
-}
+};
+
+export default TeamChannelList;

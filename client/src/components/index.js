@@ -18,6 +18,7 @@ import UserList from "./UserList";
 import ListContainer from "./ListContainer";
 import UserItem from "./UserItem";
 import ChannelNameInputComp from "./ChannelNameInputComp";
+import ChannelListContent from "./ChannelListContent";
 
 export {
   ChannelContainer,
@@ -40,4 +41,5 @@ export {
   ListContainer,
   UserItem,
   ChannelNameInputComp,
+  ChannelListContent,
 };
