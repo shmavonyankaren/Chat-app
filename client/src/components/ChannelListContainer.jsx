@@ -7,8 +7,7 @@ import {
   Sidebar,
   CompanyHeader,
 } from "./";
-import Cookies from "universal-cookie";
-
+import { channelTeamFilter, channelMessagingFilter } from "../utils";
 function ChannelListContainer({
   isCreatin,
   setIsCreating,
@@ -23,7 +22,7 @@ function ChannelListContainer({
         <ChannelSearch />
         <ChannelList
           filters={{}}
-          channelRenderFilterFn={() => {}}
+          channelRenderFilterFn={channelTeamFilter}
           List={(listProps) => (
             <TeamChannelList
               {...listProps}
@@ -40,7 +39,7 @@ function ChannelListContainer({
         />
         <ChannelList
           filters={{}}
-          channelRenderFilterFn={() => {}}
+          channelRenderFilterFn={channelMessagingFilter}
           List={(listProps) => (
             <TeamChannelList
               {...listProps}
