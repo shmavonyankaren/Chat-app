@@ -17,6 +17,7 @@ import TeamMessage from "./TeamMessage";
 import UserList from "./UserList";
 import ListContainer from "./ListContainer";
 import UserItem from "./UserItem";
+import ChannelNameInputComp from "./ChannelNameInputComp";
 
 export {
   ChannelContainer,
@@ -38,4 +39,5 @@ export {
   UserList,
   ListContainer,
   UserItem,
+  ChannelNameInputComp,
 };
